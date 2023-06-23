@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MovieHub.Data;
+using MovieHub.Data.Services;
 
 internal class Program
 {
@@ -9,7 +10,7 @@ internal class Program
 
         // Add services to the container.
 
-
+        builder.Services.AddScoped<IActorsService, ActorsService>();
         builder.Services.AddControllersWithViews();
 
         //DbContext config
