@@ -151,8 +151,8 @@ namespace MovieHub.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-3.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(10),
-                            CinemaId = 3,
-                            ProducerId = 3,
+                            CinemaId = 10,
+                            ProducerId = 10,
                             MovieCategory = MovieCategory.Documentary
                         },
                         new Movie()
@@ -163,8 +163,8 @@ namespace MovieHub.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(3),
-                            CinemaId = 1,
-                            ProducerId = 1,
+                            CinemaId = 8,
+                            ProducerId = 8,
                             MovieCategory = MovieCategory.Action
                         },
                         new Movie()
@@ -175,8 +175,8 @@ namespace MovieHub.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-4.jpeg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(7),
-                            CinemaId = 4,
-                            ProducerId = 4,
+                            CinemaId = 11,
+                            ProducerId = 11,
                             MovieCategory = MovieCategory.Horror
                         },
                         new Movie()
@@ -187,8 +187,8 @@ namespace MovieHub.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-6.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-5),
-                            CinemaId = 1,
-                            ProducerId = 2,
+                            CinemaId = 8,
+                            ProducerId = 9,
                             MovieCategory = MovieCategory.Documentary
                         },
                         new Movie()
@@ -199,8 +199,8 @@ namespace MovieHub.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-7.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-2),
-                            CinemaId = 1,
-                            ProducerId = 3,
+                            CinemaId = 8,
+                            ProducerId = 10,
                             MovieCategory = MovieCategory.Cartoon
                         },
                         new Movie()
@@ -211,8 +211,8 @@ namespace MovieHub.Data
                             ImageURL = "http://dotnethow.net/images/movies/movie-8.jpeg",
                             StartDate = DateTime.Now.AddDays(3),
                             EndDate = DateTime.Now.AddDays(20),
-                            CinemaId = 1,
-                            ProducerId = 5,
+                            CinemaId = 8,
+                            ProducerId = 12,
                             MovieCategory = MovieCategory.Drama
                         }
                     });
@@ -225,91 +225,91 @@ namespace MovieHub.Data
                     {
                         new Actor_Movie()
                         {
-                            ActorId = 1,
-                            MovieId = 3
+                            ActorId = 10,
+                            MovieId = 12
                         },
                         new Actor_Movie()
                         {
-                            ActorId = 3,
-                            MovieId = 5
+                            ActorId = 12,
+                            MovieId = 14
                         },
 
                          new Actor_Movie()
                         {
-                            ActorId = 1,
-                            MovieId = 6
+                            ActorId = 10,
+                            MovieId = 15
                         },
                          new Actor_Movie()
                         {
-                            ActorId = 4,
-                            MovieId = 7
+                            ActorId = 13,
+                            MovieId = 14
                         },
 
                         new Actor_Movie()
                         {
-                            ActorId = 1,
-                            MovieId = 7
+                            ActorId = 10,
+                            MovieId = 13
                         },
                         new Actor_Movie()
                         {
-                            ActorId = 2,
-                            MovieId = 7
+                            ActorId = 11,
+                            MovieId = 13
                         },
                         new Actor_Movie()
                         {
-                            ActorId = 5,
-                            MovieId = 3
-                        },
-
-
-                        new Actor_Movie()
-                        {
-                            ActorId = 2,
-                            MovieId = 4
-                        },
-                        new Actor_Movie()
-                        {
-                            ActorId = 3,
-                            MovieId = 4
-                        },
-                        new Actor_Movie()
-                        {
-                            ActorId = 4,
-                            MovieId = 4
+                            ActorId = 12,
+                            MovieId = 12
                         },
 
 
                         new Actor_Movie()
                         {
-                            ActorId = 2,
-                            MovieId = 5
+                            ActorId = 11,
+                            MovieId = 15
                         },
                         new Actor_Movie()
                         {
-                            ActorId = 4,
-                            MovieId = 5
+                            ActorId = 11,
+                            MovieId = 11
                         },
                         new Actor_Movie()
                         {
-                            ActorId = 5,
-                            MovieId = 5
+                            ActorId = 13,
+                            MovieId = 13
                         },
 
 
                         new Actor_Movie()
                         {
-                            ActorId = 3,
-                            MovieId = 6
+                            ActorId = 11,
+                            MovieId = 10
                         },
                         new Actor_Movie()
                         {
-                            ActorId = 4,
-                            MovieId = 6
+                            ActorId = 13,
+                            MovieId = 15
                         },
                         new Actor_Movie()
                         {
-                            ActorId = 5,
-                            MovieId = 6
+                            ActorId = 14,
+                            MovieId = 14
+                        },
+
+
+                        new Actor_Movie()
+                        {
+                            ActorId = 12,
+                            MovieId = 15
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 13,
+                            MovieId = 10
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 14,
+                            MovieId = 15
                         },
                     });
                     context.SaveChanges();

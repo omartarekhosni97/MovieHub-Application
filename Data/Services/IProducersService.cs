@@ -3,7 +3,7 @@ using MovieHub.Models;
 
 namespace MovieHub.Data.Services
 {
-    public interface IActorsService:IEntityBaseRepository<Actor>
+    public interface IProducersService:IEntityBaseRepository<Producer>
     {
         
     }

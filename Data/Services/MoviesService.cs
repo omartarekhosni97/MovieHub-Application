@@ -4,10 +4,10 @@ using MovieHub.Models;
 
 namespace MovieHub.Data.Services
 {
-    public class ActorsService :EntityBaseRepository<Actor>, IActorsService
+    public class MoviesService :EntityBaseRepository<Movie>, IMoviesService
     {
         
-        public ActorsService(AppDbContext context):base(context)
+        public MoviesService(AppDbContext context):base(context)
         {
            
         }
