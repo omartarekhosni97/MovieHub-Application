@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Optivem.Framework.Core.Domain;
+using System.Linq.Expressions;
 
 namespace MovieHub.Data.Base
 {
@@ -34,6 +35,13 @@ namespace MovieHub.Data.Base
         {
             var result = await _context.Set<T>().ToListAsync();
             return result;
+        }
+
+        public async Task<IEnumerable<T>> GetAllAsync(params Expression<Func<T, object>>[] includeproperties)
+        {
+            IQueryable<T> query = _context.Set<T>();
+            query = includeproperties.Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
+            return await query.ToListAsync();   
         }
 
         public async Task<T> GetByIdAsync(int id)
