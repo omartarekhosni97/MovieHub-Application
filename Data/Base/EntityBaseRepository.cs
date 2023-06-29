@@ -5,10 +5,10 @@ using System.Linq.Expressions;
 
 namespace MovieHub.Data.Base
 {
-    public class EntityBaseRepository<T> : IEntityBaseRepository<T> where T : class, IEntityBase, new()
+    public class IOrdersService<T> : IEntityBaseRepository<T> where T : class, IEntityBase, new()
     {
         public readonly AppDbContext _context;
-        public EntityBaseRepository(AppDbContext context) 
+        public IOrdersService(AppDbContext context) 
         {
             _context = context;
         }

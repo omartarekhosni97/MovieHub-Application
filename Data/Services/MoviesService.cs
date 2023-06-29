@@ -6,7 +6,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MovieHub.Data.Services
 {
-    public class MoviesService :EntityBaseRepository<Movie>, IMoviesService
+    public class MoviesService :IOrdersService<Movie>, IMoviesService
     {
         private readonly AppDbContext _context;
         public MoviesService(AppDbContext context):base(context)

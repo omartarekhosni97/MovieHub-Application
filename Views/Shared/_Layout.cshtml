@@ -1,5 +1,5 @@
 ﻿﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en_US">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,7 +27,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Movies" asp-action="Index"><i class="bi bi-film"></i> Movies</a>
                         </li>
 
-                        @if(true)
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                         {
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -74,12 +74,16 @@
                         </button>
                     </form>
 
-                   @* <ul class="navbar-nav">
+                    <ul class="navbar-nav">
                         @await Component.InvokeAsync("ShoppingCartSummary")
-                    </ul>*@
+                    </ul>
 
-                    @*<partial name="_Identity.cshtml" />*@
+                    @*User profile section*@
+                    <partial name="_Identity.cshtml" />
+                    
+                    
                 </div>
+               
             </div>
         </nav>
     </header>
@@ -92,7 +96,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - eTickets
+            &copy; 2023 - MovieHub
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

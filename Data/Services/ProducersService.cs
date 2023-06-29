@@ -4,7 +4,7 @@ using MovieHub.Models;
 
 namespace MovieHub.Data.Services
 {
-    public class ProducersService :EntityBaseRepository<Producer>, IProducersService
+    public class ProducersService :IOrdersService<Producer>, IProducersService
     {
         
         public ProducersService(AppDbContext context):base(context)
