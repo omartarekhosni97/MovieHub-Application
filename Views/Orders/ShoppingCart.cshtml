@@ -78,6 +78,7 @@
 @section Scripts{
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     <script>
+        let _total = @Html.Raw(@Model.ShoppingCartTotal);
         paypal.Button.render(
             {
                 //Configure environment
@@ -94,7 +95,26 @@
                     shape:'pill'
                 },
 
-                commit:true
+                commit:true,
+                //Set up payment
+                payment: function(data, actions){
+                    return actions.payment.create({
+                        transactions:[{
+                            amount: {
+                                total: _total,
+                                currency:'USD'
+                            }
+                        }]
+                    });
+                },
+
+                //Execute payment
+                onAuthorize: function(data, actions){
+                    return actions.payment.execute().then(function (){
+                        var url = '@Url.Action("CompleteOrder","Orders", new { })';
+                        window.location.href = url;
+                    });
+                } 
             }, '#paypal-btn'
         );
         
